@@ -13,7 +13,13 @@ class Date:
 
     @staticmethod
     def is_leap_year(year: int) -> bool:
-        ...
+        is_leap_year = True    
+        if year % 100 == 0:    
+            is_leap_year = False     
+        if year % 4 and 400 == 0:    
+            is_leap_year = True
+        return is_leap_year
+
 
     @staticmethod
     def days_in_month(month: int, year: int) -> int:
