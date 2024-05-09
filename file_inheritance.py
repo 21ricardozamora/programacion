@@ -21,12 +21,11 @@ class MediaFile(File):
         super().__init__(path)
         self.codec = codec
         self.geoloc = geoloc
-        self.duration = duration       
+        self.duration = duration
 
     @property
     def info(self):
-        base_info = super().info
-        return f"{base_info} [codec={self.codec}, geoloc={self.geoloc}, duration={self.duration}s]"
+        return f"{super().info}\nCodec: {self.codec}\nGeolocalization: {self.geoloc}\nDuration: {self.duration}s"
 
 
 class VideoFile(MediaFile):
@@ -43,5 +42,4 @@ class VideoFile(MediaFile):
 
     @property
     def info(self):
-        base_info = super().info
-        return f"{base_info} Dimensions: {self.dimensions}"
+        return f"{super().info}\nDimensions: {self.dimensions}"
