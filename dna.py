@@ -11,6 +11,7 @@ class DNA:
         self.sequence = sequence
 
     def __str__(self):
+<<<<<<< HEAD
         return self.sequence
 
     @property
@@ -32,6 +33,25 @@ class DNA:
     def thymines(self) -> int:
         """Número de timinas de la secuencia de ADN"""
         return self.sequence.count(DNA.THYMINE)
+=======
+        return f'{self.sequence}'
+
+    @property
+    def adenines(self):
+        ADENINES = 'A'
+
+    @property
+    def cytosines(self):
+        CYTOSINES = 'C'
+
+    @property
+    def guanines(self):
+        GUANINES = 'G'
+
+    @property
+    def thymines(self):
+        THYMINES = 'T'
+>>>>>>> cb8c2f5857d6124ded63039d97ad5c1f31d4e960
 
     def __add__(self, other: DNA) -> DNA:
         """Se define la suma de dos secuencias de ADN como el máximo de cada base nitrogenada
@@ -43,7 +63,10 @@ class DNA:
         ...
 
     def __len__(self):
+<<<<<<< HEAD
         """Longitud de la secuencia de ADN"""
+=======
+>>>>>>> cb8c2f5857d6124ded63039d97ad5c1f31d4e960
         return len(self.sequence)
 
     def stats(self) -> dict[str, float]:
